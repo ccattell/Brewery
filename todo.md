@@ -7,6 +7,7 @@
 <ul>
 	<li>Remove constructed barrels and replace with 1.14 barrel containers</li>
 	<li>Add the ability to create private labels<br>Example Label:<br>Connor's Darkbeer<br>Barrel Aged 44 day</li>
+	<li>Integrate with slimefun / exotic garden to add even more brewing recipe options</li>
 	<li>Add increased fall damage to drunken effects</li>
 	<li>Add particle effects to cauldron when cooking</li>
 	<li>Make it so that you randomly drop item in hand while drunk</li>
