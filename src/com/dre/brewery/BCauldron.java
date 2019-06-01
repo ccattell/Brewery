@@ -4,6 +4,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.bukkit.block.data.BlockData;
 import org.bukkit.block.data.Levelled;
+import org.bukkit.block.data.Lightable;
 import org.bukkit.entity.Player;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -36,7 +37,7 @@ public class BCauldron {
 
 	public void onUpdate() {
 		// Check if fire still alive
-		if (!block.getChunk().isLoaded() || block.getRelative(BlockFace.DOWN).getType() == Material.FIRE || LegacyUtil.isLava(block.getRelative(BlockFace.DOWN).getType())) {
+		if (!block.getChunk().isLoaded() || block.getRelative(BlockFace.DOWN).getType() == Material.FIRE || LegacyUtil.isLava(block.getRelative(BlockFace.DOWN).getType()) || isLitCampfire(block.getRelative(BlockFace.DOWN))) {
 			// add a minute to cooking time
 			state++;
 			if (someRemoved) {
@@ -44,6 +45,14 @@ public class BCauldron {
 				someRemoved = false;
 			}
 		}
+	}
+
+	private boolean isLitCampfire(Block block) {
+		if (block.getType().equals(Material.CAMPFIRE)) {
+			Lightable lightable = (Lightable) block.getBlockData();
+			return lightable.isLit();
+		}
+		return false;
 	}
 
 	// add an ingredient to the cauldron
