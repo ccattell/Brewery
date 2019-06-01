@@ -3,7 +3,7 @@ version: 1.7.1
 main: com.dre.brewery.P
 softdepend: [LWC, LogBlock, WorldGuard, GriefPrevention, Vault, Citadel]
 authors: [Milan Albrecht, Frank Baumann, ProgrammerDan, Daniel Saukel]
-api-version: 1.13
+api-version: 1.14
 commands:
   brewery:
     description: Command for Administration

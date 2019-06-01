@@ -14,7 +14,6 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 
-
 /**
  * Update Checker modified from the Gravity Update Checker Example:
  * https://github.com/gravitylow/ServerModsAPI-Example/blob/master/Update.java

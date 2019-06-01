@@ -1,10 +1,6 @@
 package com.dre.brewery;
 
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.TreeSpecies;
-import org.bukkit.World;
+import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.block.data.BlockData;
 import org.bukkit.block.data.Levelled;
@@ -101,7 +97,7 @@ public class LegacyUtil {
 	}
 
 	public static boolean isSign(Material type) {
-		return type == Material.SIGN || type == Material.WALL_SIGN || (!P.use1_13 && type == SIGN_POST);
+		return Tag.SIGNS.isTagged(type) || (!P.use1_13 && type == SIGN_POST);
 	}
 
 	// LAVA and STATIONARY_LAVA are merged as of 1.13
